@@ -103,7 +103,7 @@ int main() {
               car_s = end_path_s;
           }
 
-          // Prediction
+          // Other car predictions
           bool other_car_ahead = false;
           bool other_car_left = false;
           bool other_car_right = false;
@@ -169,7 +169,7 @@ int main() {
 
           }
 
-          // Behavior
+          // Behavior planning
           if(other_car_ahead)
           {
               if(own_lane > 0 && !other_car_left)

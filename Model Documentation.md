@@ -4,7 +4,7 @@ Since the very good and detailed Q&A session started with the trajectory generat
 
 ## Trajectory generation
 
-The actual path planning resp. trajectory generation goes from [line 210 to 319](./src/main.cpp#L219).
+The actual path planning resp. trajectory generation goes from [line 210 to 319](./src/main.cpp#L210).
 
 As the whole code was taken from the Q&A session I am going to repeat the most important steps.
 First the last two points of the previous trajectory, or the actual car position is taken if there is no previous trajectory, see lines 221-250. Furthermore three points in the distance (30m, 60m and 90m) are taken, see lines 252-262. These 5 points comprise in total the "anker" points through which a spline will be calculated. Yet before the spline is intialized, the points are transformed from global map coordinates to local car coordinates, see lines 264-272. Then the spline is created with these five "anker" points, see line 274-278.
